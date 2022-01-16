@@ -12,7 +12,7 @@ def run_process(process_name: str, process_time: str):
     for _ in range(int(process_time)):
         time.sleep(1)
         # Randomly define whether the process failed
-        if random.random() < 0.3:
+        if random.random() < 0.1:
             # If process failed, notify Slack
             post_failed_process_to_slack(process_name)
             raise Exception("Process Failed!")
